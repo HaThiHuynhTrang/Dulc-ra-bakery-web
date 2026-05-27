@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Lab Thực Hành</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Dulcéra</span>
+                    <span class="logo-sub">Bakery Paris</span>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm bài thực hành...">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <a href="login.html" class="action-item"><i class="fa-regular fa-user"></i> Đăng nhập</a>
+                <div class="cart-dropdown">
+                    <a href="cart-detail.html" class="action-item cart-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count">2</span>
+                        Giỏ hàng
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar" id="myNavBar">
+        <div class="container nav-wrapper">
+            
+            <div class="category-menu-wrapper">
+                <div class="category-toggle" onclick="myFunction()">
+                    <i class="fa-solid fa-bars"></i> Danh mục bánh <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </div>
+                <ul class="category-list">
+                    <li><a href="#"><i class="fa-solid fa-bread-slice"></i> Croissant & Viennoiserie</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cookie"></i> Macarons <span class="badge badge-hot">Hot</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-birthday-cake"></i> Bánh Kem Sinh Nhật</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cake"></i> Pâtisserie Thập Cẩm</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gift"></i> Quà Tặng & Combo</a></li>
+                </ul>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="store.html">Cửa hàng</a></li>
+                <li><a href="about.html">Câu chuyện Dulcéra</a></li>
+                <li><a href="blog.html">Góc Paris (Blog)</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="labthuchanh.html" class="active">Lab thực hành</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container labs-container">
+        <h2 class="section-title" style="margin-top: 40px; margin-bottom: 10px;">Báo Cáo Thực Hành</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; font-style: italic;">Danh sách các thực hành nhập môn web và ứng dụng</p>
+
+        <div class="labs-grid">
+            
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab01: HTML</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab01/lab1_bai3.html">Lab1_3</a></li>
+                        <li><a href="./allLab/Lab01/Lab1_bai4.html">Lab1_4</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab02: Table & List</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab02/lab02_bai1.html">Lab2_1</a></li>
+                        <li><a href="./allLab/Lab02/lab02_bai2.html">Lab2_2</a></li>
+                        <li><a href="./allLab/Lab02/lab02_khung_table.html">Lab2_3</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab03: Frame & Form</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab03/Vi_du_Lab03.1/lab03_bai1.html">Lab3_1</a></li>
+                        <li><a href="./allLab/Lab03/Vi_du_lab03/lab03_bai2.html">Lab3_2</a></li>
+                        <li><a href="./allLab/Lab03/Vi_du_Lab03.1/index.html">Lab3_3</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab04: CSS cơ bản</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab04/Vi_du_lab4/lab04_bai1.html">Lab4_1</a></li>
+                        <li><a href="./allLab/Lab04/Vi_du_lab4/lab04_bai2.html">Lab4_2</a></li>
+                        <li><a href="./allLab/Lab04/Vi_du_lab4/lab04_bai3.html">Lab4_3</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab05: Các thuộc tính CSS</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab05/lab05_bai1.html">Lab5_1</a></li>
+                        <li><a href="./allLab/Lab05/Bai_2/index.html">Lab5_2</a></li>
+                        <li><a href="./allLab/Lab05/Vi_du/index.html">Lab5_3</a></li>
+                        <li><a href="./allLab/Lab05/Vi_du/index.html">Lab5_4</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab06: Xây dựng layout responsive bằng CSS</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab06/Bai_2_Minh_hoa_layout/lab6_menu_reponsive.html">Lab6_1</a></li>
+                        <li><a href="./allLab/Lab06/Bai_2_Minh_hoa_layout/lab6_bai2.html">Lab6_2</a></li>
+                        <li><a href="./allLab/Lab06/Bai_2_Minh_hoa_layout/lab6_bai3.html">Lab6_3</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab07: Javascript</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab07/Vi_du/index.html">Lab7_1</a></li>
+                        <li><a href="./allLab/Lab07/demo_bai_2/index.html">Lab7_2</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+            <div class="lab-card">
+                <div class="lab-card-content">
+                    <h3>Lab08: Javascript nâng cao</h3>
+                    <ul class="lab-sub-list">
+                        <li><a href="./allLab/Lab08/lab08_slider.html">Lab8_1</a></li>
+                        <li><a href="./allLab/Lab08/lab08_slider_auto.html">Lab8_2</a></li>
+                        <li><a href="./allLab/Lab08/lab08_json.html">Lab8_3 - Lab8_3_v2</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn-view-lab">Xem chi tiết</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <span class="logo-text">Dulcéra</span>
+                <p>Dulcéra đồ án webisite bán bánh cuối kì môn học thực hành nhập môn web</p>
+            </div>
+           
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Họ và tên: Hà Thị Huỳnh Trang | MSSV: DH52302040 | Lớp: D23_TH08 | Nhóm 34 Thứ 7 Ca 2</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scrip.js"></script>
+</body>
+</html>

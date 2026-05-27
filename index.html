@@ -1,142 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakes Bakery</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <title>Dulcera Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <!-- MENU -->
+    <header class="header">
+        <div class="container header-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Dulcéra</span>
+                    <span class="logo-sub">Bakery Paris</span>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm bánh Croissant, Macaron, Tarte...">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
 
-    <nav>
+            <div class="header-actions">
+                <a href="login.html" class="action-item"><i class="fa-regular fa-user"></i> Đăng nhập</a>
+                <div class="cart-dropdown">
+                    <a href="cart-detail.html" class="action-item cart-btn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count">2</span>
+                        Giỏ hàng
+                    </a>
+                    <div class="cart-mini-content">
+                        <p class="cart-total"><strong>Tổng:</strong> 240.000đ</p>
+                        <div class="cart-actions">
+                            <a href="cart-detail.html" class="btn btn-secondary">Xem giỏ hàng</a>
+                            <a href="checkout.html" class="btn btn-primary">Thanh toán</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <h1>BAKES</h1>
-
-        <ul>
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#menu">Menu</a></li>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
+    <nav class="nav-bar" id="myNavBar">
+        <div class="container nav-wrapper">
+            
+            <div class="category-menu-wrapper">
+                <div class="category-toggle" onclick="myFunction()">
+                    <i class="fa-solid fa-bars"></i> Danh mục bánh <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </div>
+                <ul class="category-list">
+                    <li><a href="#"><i class="fa-solid fa-bread-slice"></i> Croissant & Viennoiserie</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cookie"></i> Macarons <span class="badge badge-hot">Hot</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-birthday-cake"></i> Bánh Kem Sinh Nhật</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cake"></i> Pâtisserie Thập Cẩm</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gift"></i> Quà Tặng & Combo</a></li>
+                </ul>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="store.html">Cửa hàng</a></li>
+                <li><a href="about.html">Câu chuyện Dulcéra</a></li>
+                <li><a href="blog.html">Góc Paris (Blog)</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="labthuchanh.html">Lab thực hành</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-        <div class="overlay">
-
-            <h2>Dulcéra Bakery</h2>
-
-            <p>
-                Fresh pastries made everyday with love and natural ingredients.
-            </p>
-
-            <button>Explore Menu</button>
-
+    <section class="hero-banner">
+        <div class="banner-slide active">
+            <div class="banner-img-mock" style="background: linear-gradient(rgba(44,34,30,0.4), rgba(44,34,30,0.4)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1470&auto=format&fit=crop') center/cover;"></div>
+            <div class="banner-content">
+                <span class="subtitle">Artisan Pâtisserie Française</span>
+                <h1>Hương Vị Lãng Mạn Từ Paris</h1>
+                <p>Thưởng thức những chiếc bánh ngọt chuẩn vị Pháp được nhào nặn thủ công từ bơ thượng hạng và tình yêu nguyên bản.</p>
+                <a href="store.html" class="btn btn-primary">Khám phá ngay</a>
+            </div>
         </div>
-
     </section>
 
-    <!-- PRODUCTS -->
+    <section class="features container">
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-stroopwafel"></i></div>
+            <div class="feature-info">
+                <h3>Nướng Tươi Mỗi Ngày</h3>
+                <p>Bánh ra lò nóng hổi mỗi buổi sáng</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <div class="feature-info">
+                <h3>Nguyên Liệu Nhập Khẩu</h3>
+                <p>Bơ Pháp, Chocolate Bỉ 100%</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div class="feature-info">
+                <h3>Giao Hàng Hỏa Tốc</h3>
+                <p>Giữ trọn hương vị trong 2 giờ</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="feature-info">
+                <h3>Công Thức Độc Quyền</h3>
+                <p>Do thợ bánh chuẩn Pháp thực hiện</p>
+            </div>
+        </div>
+    </section>
 
-    <section class="products" id="menu">
-
-        <h2>Our Best Sellers</h2>
-
+    <section class="products-section container">
+        <h2 class="section-title">Sản Phẩm Bán Chạy</h2>
         <div class="product-grid">
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop">
-
-                <h3>Croissant</h3>
-
-                <p>Buttery and crispy French pastry.</p>
-
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop" alt="Croissant">
+                    <span class="badge badge-hot">Hot</span>
+                </div>
+                <div class="product-details">
+                    <span class="prod-category">Viennoiserie</span>
+                    <h3 class="prod-title"><a href="#">Croissant Bơ Pháp Cổ Điển</a></h3>
+                    <p class="prod-price">45.000đ</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Thêm vào giỏ</button>
+                </div>
             </div>
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop">
-
-                <h3>Birthday Cake</h3>
-
-                <p>Perfect cakes for every celebration.</p>
-
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=500&auto=format&fit=crop" alt="Macarons">
+                    <span class="badge badge-new">New</span>
+                </div>
+                <div class="product-details">
+                    <span class="prod-category">Macarons</span>
+                    <h3 class="prod-title"><a href="#">Hộp Macaron Sắc Màu Paris (6 cái)</a></h3>
+                    <p class="prod-price">180.000đ</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Thêm vào giỏ</button>
+                </div>
             </div>
-
-            <div class="card">
-
-                <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200&auto=format&fit=crop">
-
-                <h3>Tiramisu</h3>
-
-                <p>Soft creamy Italian dessert.</p>
-
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=500&auto=format&fit=crop" alt="Pain au Chocolat">
+                </div>
+                <div class="product-details">
+                    <span class="prod-category">Viennoiserie</span>
+                    <h3 class="prod-title"><a href="#">Pain au Chocolat thanh lịch</a></h3>
+                    <p class="prod-price">55.000đ</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Thêm vào giỏ</button>
+                </div>
             </div>
-
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=500&auto=format&fit=crop" alt="Tarte">
+                </div>
+                <div class="product-details">
+                    <span class="prod-category">Pâtisserie</span>
+                    <h3 class="prod-title"><a href="#">Tarte Sô-cô-la Dâu Tây</a></h3>
+                    <p class="prod-price">85.000đ</p>
+                    <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i> Thêm vào giỏ</button>
+                </div>
+            </div>
         </div>
-
     </section>
 
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <div class="about-text">
-
-            <h2>About Us</h2>
-
-            <p>
-                Inspired by French bakeries, we create handcrafted pastries using fresh ingredients and elegant presentation.
-            </p>
-
-            <button>Read More</button>
-
+    <section class="promo-banners container">
+        <div class="promo-item" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511018556340-d16986a1c194?q=80&w=600&auto=format&fit=crop') center/cover;">
+            <div class="promo-text">
+                <h3>Trà Chiều & Bánh Ngọt</h3>
+                <p>Ưu đãi combo cuối tuần giảm 15%</p>
+            </div>
         </div>
-
-        <div class="about-image">
-
-            <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=1200&auto=format&fit=crop">
-
+        <div class="promo-item" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1548364538-60b952c308b9?q=80&w=600&auto=format&fit=crop') center/cover;">
+            <div class="promo-text">
+                <h3>Bánh Kem Sự Kiện</h3>
+                <p>Đặt trước thi công theo yêu cầu riêng</p>
+            </div>
         </div>
-
     </section>
 
-    <!-- FOOTER -->
-
-    <footer id="contact">
-
-        <div>
-
-            <h3>BAKES</h3>
-
-            <p>Dulcéra bakery & Coffee</p>
-
+    <section class="blog-section container">
+        <h2 class="section-title">Góc Lãng Mạn Dulcera</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=500&auto=format&fit=crop" alt="Blog 1">
+                <div class="blog-content">
+                    <span class="blog-date">26 Tháng 5, 2026</span>
+                    <h3> Bí mật đằng sau những lớp bột ngàn lớp của Croissant Pháp</h3>
+                    <p>Để làm ra một chiếc Croissant hoàn hảo, người thợ bánh Dulcera phải trải qua hơn 36 giờ ủ bột và cán gấp...</p>
+                    <a href="#" class="read-more">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=500&auto=format&fit=crop" alt="Blog 2">
+                <div class="blog-content">
+                    <span class="blog-date">18 Tháng 5, 2026</span>
+                    <h3>Văn hóa thưởng bánh và cà phê sáng đúng điệu người Paris</h3>
+                    <p>Người Paris không vội vã. Họ dành cả buổi sáng bên ban công, thưởng một tách Cappuccino ấm cùng chiếc bánh...</p>
+                    <a href="#" class="read-more">Đọc thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
         </div>
+    </section>
 
-        <div>
-
-            <p>Email: tuoicaominh23@gmail.com</p>
-
-            <p>Phone: 0123 456 789</p>
-
+    <section class="newsletter">
+        <div class="container newsletter-wrapper">
+            <h2>Đăng ký nhận Bản tin Dulcera</h2>
+            <p>Nhận ngay Voucher giảm giá 10% cho khách hàng mua lần đầu tiên và các khuyến mãi truyền hàng tuần.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Địa chỉ email của bạn..." required>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
         </div>
+    </section>
 
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <span class="logo-text">Dulcera</span>
+                <p>Dulcera Bakery mang trọn vẹn tinh hoa văn hóa Pâtisserie của nước Pháp đến lòng Sài Gòn. Mỗi sản phẩm là một tác phẩm nghệ thuật vị giác.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h3>Thông Tin Liên Hệ</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh</li>
+                    <li><i class="fa-solid fa-envelope"></i> dh52302040@student.stu.edu.vn</li>
+                    <li><i class="fa-solid fa-phone"></i> 0898 411 652</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container copyright">
+                <p>Đồ án tiệm bánh Dulcera Bakery | Hà Thị Huỳnh Trang | MSSV: DH52302040</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="./js/scrip.js"></script>
 
 </body>
 </html>

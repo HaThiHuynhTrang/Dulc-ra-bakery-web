@@ -1,0 +1,787 @@
+:root {
+    --primary-color: #8C6239;     /* Nâu vỏ bánh mì / Chocolate ấm áp */
+    --secondary-color: #D4A373;   /* Vàng bơ nướng hảo hạng */
+    --accent-color: #E6CCB2;      /* Kem Beige dịu ngọt */
+    --bg-light: #FDFBF7;          /* Màu nền giấy da cổ điển */
+    --text-dark: #3D312A;         /* Nâu đậm thẫm quý phái */
+    --text-muted: #7A695E;        /* Nâu xám nhạt nhẹ nhàng */
+    --white: #FFFFFF;
+    --french-pink: #F5EBE0;       /* Hồng phấn macarons thanh lịch */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo-text, .subtitle {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '✿';
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--french-pink);
+}
+
+
+
+.header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+.logo a { 
+    text-decoration: none; 
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    width: 40%;
+    max-width: 500px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px 0 0 25px;
+    background-color: var(--bg-light);
+    outline: none;
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.action-item {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.cart-dropdown {
+    position: relative;
+}
+
+.cart-btn {
+    background-color: var(--french-pink);
+    padding: 10px 18px;
+    border-radius: 20px;
+}
+
+.cart-count {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2px 7px;
+    font-size: 0.75rem;
+    border-radius: 50%;
+}
+
+.cart-mini-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--white);
+    border: 1px solid var(--accent-color);
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    z-index: 99;
+}
+
+.cart-dropdown:hover .cart-mini-content {
+    display: block;
+}
+
+.cart-total {
+    margin-bottom: 15px;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-actions .btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   4. NAVIGATION BAR & DANH MỤC XỔ XUỐNG
+   ========================================================================== */
+.nav-bar {
+    background-color: var(--primary-color);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 0;
+    display: inline-block;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--accent-color);
+}
+
+/* --- LOGIC HIỂN THỊ DANH MỤC  --- */
+.category-menu-wrapper {
+    position: relative;
+}
+
+.category-toggle {
+    color: var(--white);
+    padding: 15px 20px;
+    background-color: var(--text-dark);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-toggle .arrow-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+/* Định dạng Menu Danh sách */
+.category-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 260px;
+    background-color: var(--white);
+    list-style: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 0 0 12px 12px;
+    padding: 10px 0;
+    box-shadow: 0 10px 20px rgba(140, 98, 57, 0.08);
+    z-index: 100;
+    
+    /* Trạng thái ẩn ẩn */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+#myNavBar.responsive .category-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#myNavBar.responsive .arrow-icon {
+    transform: rotate(-180deg);
+}
+
+
+.category-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.category-list li a:hover {
+    background-color: var(--french-pink);
+    color: var(--primary-color);
+}
+
+.category-list li a i {
+    width: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}
+
+.category-list li a .badge {
+    margin-left: auto;
+    position: static;
+}
+
+
+   /*  HERO BANNER SLIDESHOW */
+  
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 520px;
+}
+
+.banner-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-img-mock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 50px;
+    margin-left: 8%;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.banner-content .subtitle {
+    color: var(--secondary-color);
+    font-style: italic;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.banner-content p {
+    color: var(--french-pink);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+
+   /* FEATURES BLOCK (ĐẶC ĐIỂM NỔI BẬT) */
+ 
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 50px 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--french-pink);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.feature-info h3 {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+}
+
+.feature-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+
+   /* 7. PRODUCT GRID (DANH SÁCH BÁNH) */
+
+.products-section {
+    padding: 40px 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--french-pink);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(140, 98, 57, 0.1);
+}
+
+.product-img {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.badge-hot { background-color: #C0392B; }
+.badge-new { background-color: var(--secondary-color); }
+
+.product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.prod-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.prod-title a {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.prod-title a:hover { color: var(--primary-color); }
+
+.prod-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background-color: var(--french-pink);
+    border: none;
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+   /* PROMO BANNERS & BLOG SECTION */
+
+.promo-banners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 40px 15px;
+}
+
+.promo-item {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 16px;
+    color: var(--white);
+}
+
+.promo-text h3 { font-size: 1.8rem; margin-bottom: 5px; }
+
+/* Blog Section */
+.blog-section {
+    padding: 50px 15px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--french-pink);
+}
+
+.blog-card img { width: 100%; height: 200px; object-fit: cover; }
+
+.blog-content { padding: 25px; }
+
+.blog-date { font-size: 0.8rem; color: var(--secondary-color); }
+
+.blog-content h3 { font-size: 1.4rem; margin: 10px 0; color: var(--text-dark); }
+
+.blog-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px; }
+
+.read-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+   /* NEWSLETTER & FOOTER */
+
+.newsletter {
+    background-color: var(--french-pink);
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-wrapper {
+    padding: 60px 15px;
+    text-align: center;
+    max-width: 700px;
+}
+
+.newsletter h2 { color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.newsletter-form input {
+    padding: 15px 25px;
+    width: 60%;
+    border: 1px solid var(--accent-color);
+    border-radius: 30px 0 0 30px;
+    outline: none;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 30px 30px 0;
+}
+
+/* Footer Style */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--french-pink);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    padding: 60px 15px 40px;
+}
+
+.footer .logo-text { color: var(--white); }
+
+.footer p { color: #A89A90; font-size: 0.95rem; margin-top: 15px; }
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    background: rgba(255,255,255,0.08);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover { background: var(--secondary-color); }
+
+.footer-info h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-info ul { list-style: none; }
+
+.footer-info li {
+    margin-bottom: 12px;
+    color: #A89A90;
+}
+
+.footer-info i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #8A7B72;
+    text-align: center;
+}
+
+
+    /* RESPONSIVE MEDIA QUERIES (TƯƠNG THÍCH MOBILE) */
+
+@media (max-width: 768px) {
+    .header-wrapper, .nav-wrapper, .promo-banners, .blog-grid, .footer-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .search-bar { width: 100%; }
+    .nav-menu { flex-direction: column; gap: 15px; text-align: center; width: 100%; }
+    .banner-content { margin-left: 0; padding: 20px; }
+    .banner-content h1 { font-size: 2.2rem; }
+    .newsletter-form { flex-direction: column; gap: 10px; }
+    .newsletter-form input { width: 100%; border-radius: 25px; }
+    .newsletter-form .btn { border-radius: 25px; }
+}
+
+
+
+
+/* ĐỊNH DẠNG KHUNG GRID VÀ CARD BÀI LAB THỰC HÀNH  */
+
+
+/* Khoảng cách cho khu vực chứa các bài lab */
+.labs-container {
+    padding: 20px 15px;
+}
+
+/* Khung Grid chia cột linh hoạt (4 cột trên máy tính, tự co giãn trên điện thoại) */
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Định dạng từng ô Card Lab */
+.lab-card {
+    background-color: var(--white);
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(140, 98, 57, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Đẩy nút "Xem chi tiết" luôn nằm sát đáy Card */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng nhấc khung lên nhẹ khi di chuột vào */
+.lab-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(140, 98, 57, 0.08);
+}
+
+/* Phần nội dung text phía trên của Card */
+.lab-card-content {
+    padding: 25px 25px 15px 25px;
+}
+
+/* Tiêu đề Lab (Ví dụ: Lab01: HTML) */
+.lab-card-content h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--french-pink);
+    padding-bottom: 8px;
+}
+
+/* Danh sách các bài lab con bên trong */
+.lab-sub-list {
+    list-style: none;
+}
+
+.lab-sub-list li {
+    margin-bottom: 10px;
+}
+
+/* Đường link của từng bài lab nhỏ */
+.lab-sub-list li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s, padding-left 0.2s;
+    display: inline-block;
+}
+
+/* Hiệu ứng hover dịch chuyển nhẹ chữ bài lab nhỏ */
+.lab-sub-list li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+    font-weight: 500;
+}
+
+/* Nút "Xem chi tiết" nằm dưới đáy Card */
+.btn-view-lab {
+    display: block;
+    width: calc(100% - 50px); /* Canh lề đều hai bên */
+    margin: 0 auto 25px auto;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+/* Đổi màu nút khi hover giống tông của hệ thống */
+.btn-view-lab:hover {
+    background-color: var(--primary-color);
+}
